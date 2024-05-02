@@ -1,0 +1,17 @@
+C:\Adatok\for internship\BombGame_WPF\BombGame\bin\Debug\net6.0\BombGame.exe
+C:\Adatok\for internship\BombGame_WPF\BombGame\bin\Debug\net6.0\Input\inp.txt
+C:\Adatok\for internship\BombGame_WPF\BombGame\bin\Debug\net6.0\Input\inp2.txt
+C:\Adatok\for internship\BombGame_WPF\BombGame\bin\Debug\net6.0\Input\inp3.txt
+C:\Adatok\for internship\BombGame_WPF\BombGame\bin\Debug\net6.0\BombGame.deps.json
+C:\Adatok\for internship\BombGame_WPF\BombGame\bin\Debug\net6.0\BombGame.runtimeconfig.json
+C:\Adatok\for internship\BombGame_WPF\BombGame\bin\Debug\net6.0\BombGame.dll
+C:\Adatok\for internship\BombGame_WPF\BombGame\bin\Debug\net6.0\BombGame.pdb
+C:\Adatok\for internship\BombGame_WPF\BombGame\obj\Debug\net6.0\BombGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Adatok\for internship\BombGame_WPF\BombGame\obj\Debug\net6.0\BombGame.AssemblyInfoInputs.cache
+C:\Adatok\for internship\BombGame_WPF\BombGame\obj\Debug\net6.0\BombGame.AssemblyInfo.cs
+C:\Adatok\for internship\BombGame_WPF\BombGame\obj\Debug\net6.0\BombGame.csproj.CoreCompileInputs.cache
+C:\Adatok\for internship\BombGame_WPF\BombGame\obj\Debug\net6.0\BombGame.dll
+C:\Adatok\for internship\BombGame_WPF\BombGame\obj\Debug\net6.0\refint\BombGame.dll
+C:\Adatok\for internship\BombGame_WPF\BombGame\obj\Debug\net6.0\BombGame.pdb
+C:\Adatok\for internship\BombGame_WPF\BombGame\obj\Debug\net6.0\BombGame.genruntimeconfig.cache
+C:\Adatok\for internship\BombGame_WPF\BombGame\obj\Debug\net6.0\ref\BombGame.dll

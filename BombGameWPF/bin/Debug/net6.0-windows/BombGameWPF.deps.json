@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "BombGameWPF/1.0.0": {
+        "dependencies": {
+          "BombGame": "1.0.0"
+        },
+        "runtime": {
+          "BombGameWPF.dll": {}
+        }
+      },
+      "BombGame/1.0.0": {
+        "runtime": {
+          "BombGame.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BombGameWPF/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BombGame/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

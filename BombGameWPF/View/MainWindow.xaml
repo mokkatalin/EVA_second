@@ -1,0 +1,94 @@
+﻿<Window x:Class="BombGameWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       
+        mc:Ignorable="d"
+        Title="BombGame"
+        SizeToContent="WidthAndHeight"
+        KeyboardNavigation.DirectionalNavigation="None"
+        KeyboardNavigation.TabNavigation="None">
+    <Grid x:Name="JatekTer">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical">
+            <RadioButton x:Name="RBttn1" GroupName="Palyavalaszt" Margin="20,20,20,10" Content="8x8" Command="{Binding ChangePathCommand}" CommandParameter="Input\\inp3.txt"/>
+            <RadioButton x:Name="RBttn2" GroupName="Palyavalaszt" Margin="20,5,20,10" Content="9x9" Command="{Binding ChangePathCommand}" CommandParameter="Input\\inp2.txt"/>
+            <RadioButton x:Name="RBttn3" GroupName="Palyavalaszt" Margin="20,5,20,10" Content="10x10" Command="{Binding ChangePathCommand}" CommandParameter="Input\\inp.txt"/>
+            <Button x:Name="NewGameBttn" Margin="10" Content="New Game" Width="100" Command="{Binding NewGameCommand}"/>
+        </StackPanel>
+        <Button x:Name="QuitBttn" Grid.Row="1" Grid.Column="0" Command="{Binding ExitGameCommand}" Content="Quit" Width="100" Height="20"/>
+        <StackPanel x:Name="ResumeStack" Grid.Row="0" Grid.Column="2">
+            <Button x:Name="StopBttn" Margin="0,20,0,0" Command="{Binding StopGameCommand}" Content="{Binding StopResume}" Width="80"  Height="20"/>
+        </StackPanel>
+
+        <StatusBar x:Name="EnemyTime" Height="20" Grid.Column="1" Grid.Row="1">
+            <StatusBarItem>
+                <TextBlock x:Name="timerLabel" Text="Time: "/>
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock x:Name="timeStat" Text="{Binding GameTime}"/>
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock x:Name="enemiesLabel" Text="Enemies down: "/>
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock x:Name="enemiesStat" Text="{Binding EnemiesDown}"/>
+            </StatusBarItem>
+
+        </StatusBar>
+        <Border x:Name="GameBorder" KeyboardNavigation.DirectionalNavigation="Contained" 
+    KeyboardNavigation.TabNavigation="Contained" Grid.Column="1" Grid.Row="0" BorderBrush="Black" BorderThickness="1">
+            <ItemsControl Name="ControlP" Focusable="True"  ItemsSource="{Binding Fields}" >
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Rows="{Binding Size}" Columns="{Binding Size}" Width="auto" Height="auto"   Margin="0" VerticalAlignment="Top">
+                           
+                        </UniformGrid>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Label Width="30" Height="30" Content="{Binding Text}" Background="{Binding Color}" FontSize="16" Margin="0">
+                            <!--<Label.Style>
+                                <Style TargetType="Label">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding isWall}" Value="True">
+                                            <Setter Property="Background" Value="Black"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding isWall}" Value="False">
+                                            <Setter Property="Background" Value="White"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Label.Style>-->
+                            <!--<Label.Triggers>
+                                <EventTrigger RoutedEvent="Label.Loaded">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0:00:02" From="0" To="1" Storyboard.TargetProperty="Opacity" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </Label.Triggers>-->
+                        </Label>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                <ItemsControl.ItemContainerStyle>
+                    <Style>
+                        <Setter Property="Grid.Row" Value="{Binding X}"/>
+                        <Setter Property="Grid.Column" Value="{Binding Y}"/>
+                    </Style>
+                </ItemsControl.ItemContainerStyle>
+            </ItemsControl>
+        </Border>
+    </Grid>
+</Window>
